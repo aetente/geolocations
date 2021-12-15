@@ -1,0 +1,27 @@
+
+<html><body>
+
+<form action="hazard" method="POST">
+    {% csrf_token %}
+    <p>
+        <label for="title">title: </label>
+        <input id="title" name="title" maxlength="100" required>
+    </p>
+    <!-- <p>
+        <label for="loc">location: </label>
+        <input id="loc" name="loc" required>
+    </p> -->
+    <p>
+        <label for="lat">lat: </label>
+        <input id="lat" type="number" min="-90" max="90" name="lat" maxlength="100" step="0.0001" required>
+    </p>
+    <p>
+        <label for="lon">lon: </label>
+        <input id="lon" type="number" min="-90" max="90" name="lon" maxlength="100" step="0.0001" required>
+    </p>
+    <p>
+        <input type="submit" value="Save">
+    </p>
+</form>
+
+</body></html>
